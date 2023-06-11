@@ -1,0 +1,49 @@
+// postorder traversal in binary tree
+
+#include <bits/stdc++.h>
+using namespace std;
+   struct Node{
+       int key;
+       Node *left;
+       Node *right;
+
+       Node(int k){
+           key=k;
+           left=right=NULL;
+       }
+   };
+     void postorder(Node *root){
+         if(root!=NULL){
+                 postorder(root->left);
+                 postorder(root->right);
+                 cout<<(root->key)<<" ";
+
+         }
+
+     }
+     /*
+             TREE
+             10
+           /    \
+          20     30
+                /   \
+               40     50
+
+     */
+
+       int main(){
+           Node *root=new Node(10);
+           root->left=new Node(20);
+           root->right=new Node(30);
+           root->right->left=new Node(40);
+           root->right->right=new Node(50);
+           cout<<root->key<<endl;
+           cout<<root->left->key<<endl;
+           cout<<root->right->key<<endl;
+           cout<<root->right->left->key<<endl;
+            cout<<root->right->right->key<<endl;
+           postorder(root);
+
+   return 0;
+   }
+
