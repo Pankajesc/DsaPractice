@@ -11,14 +11,7 @@ using namespace std;
            left=right=NULL;
        }
    };
-     /*
-             TREE
-             10
-           /    \
-          20     30
-        /
-       40
-     */
+    
 
        int main(){
            Node *root=new Node(10);
