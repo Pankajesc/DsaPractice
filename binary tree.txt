@@ -1,0 +1,35 @@
+//binary tree(at most two children should be there in the binary tree condition)
+#include <bits/stdc++.h>
+using namespace std;
+   struct Node{
+       int key;
+       Node *left;
+       Node *right;
+
+       Node(int k){
+           key=k;
+           left=right=NULL;
+       }
+   };
+     /*
+             TREE
+             10
+           /    \
+          20     30
+        /
+       40
+     */
+
+       int main(){
+           Node *root=new Node(10);
+           root->left=new Node(20);
+           root->right=new Node(30);
+           root->left->left=new Node(40);
+           cout<<root->key<<endl;
+           cout<<root->left->key<<endl;
+           cout<<root->right->key<<endl;
+           cout<<root->left->left->key;
+
+   return 0;
+   }
+
